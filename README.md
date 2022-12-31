@@ -3,7 +3,7 @@
 This is a Vim plugin for web development with the static site generator
 [Hugo](https://gohugo.io/).
 
-# HTML
+## HTML
 
 - syntax highlighting and identation is improved to support the HTML Go
   template syntax.
@@ -14,7 +14,7 @@ This is a Vim plugin for web development with the static site generator
   Vim with `compiler hugo | make`, and build errors will populate the quickfix
   list.
 
-# Markdown
+## Markdown
 
 Markdown syntax highlight is also improved to add support for shortcodes and
 YAML front matter.
