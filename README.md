@@ -3,6 +3,20 @@
 This is a Vim plugin for web development with the static site generator
 [Hugo](https://gohugo.io/).
 
+## Note about this fork
+
+This fork addresses two issues:
+
+  - Improves filetype detection&mdash;it uses the presence of a `.hugo_build`
+    file (searching upward) to when setting the `htmlhugo` filetype.  So long
+    as you've run a build, the filetype will be set before adding any hugo
+    syntax.
+  - Allow `gf` to work on partials that don't have an `.html` extension.
+    
+    ```html
+    {{ partial "card" . }} <!-- `gf` works with your cursor on "card" -->
+    ```
+    
 ## HTML
 
 - syntax highlighting and identation is improved to support the HTML Go
