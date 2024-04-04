@@ -1,5 +1,13 @@
 function! s:DetectGoTemplate()
-  if findfile('.hugo_build.lock', '.;') !=# ''
+  if findfile('hugo.toml', '.;') !=# ''
+    set ft=htmlhugo
+  elseif findfile('hugo.yml', '.;') !=# ''
+    set ft=htmlhugo
+  elseif findfile('hugo.yaml', '.;') !=# ''
+    set ft=htmlhugo
+  elseif findfile('hugo.json', '.;') !=# ''
+    set ft=htmlhugo
+  elseif findfile('.hugo_build.lock', '.;') !=# ''
     set ft=htmlhugo
   elseif search('{{\s*end\s*}}')
     set ft=htmlhugo
